@@ -124,10 +124,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="aula1.cpp" />
-    <ClCompile Include="aula_2_ponteiros.cpp" />
-    <ClCompile Include="aula_3_tipos_ertruturados.cpp" />
-    <ClCompile Include="aula_4_modulo.cpp" />
-    <ClCompile Include="aula_5_sobrecargaOperadores.cpp" />
+    <ClCompile Include="aula_2_ponteiros.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aula_3_tipos_ertruturados.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aula_4_modulo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aula_5_sobrecargaOperadores.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aula_6_heranca_polimorismo.cpp" />
     <ClCompile Include="point.cpp" />
   </ItemGroup>
   <ItemGroup>
