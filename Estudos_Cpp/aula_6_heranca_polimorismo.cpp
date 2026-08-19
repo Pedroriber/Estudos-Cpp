@@ -256,22 +256,23 @@ class Quadrado : public Poligono {
 		cout << "tenho 4 lados" << endl;
 	}
 };
-void lados(Poligono* a) {
+void lados( Poligono* a) {
 	a->lados();
 }
 int main() {
 	Cachorro cachorro;
 	Gato gato;
-	Animal animal;
-
+	Animal * p = &cachorro;
+	p->falar();
 	fazerFalar(&cachorro);
 	fazerFalar(&gato);
-	fazerFalar(&animal);
+	
 
 	Triangulo tri;
 	Quadrado quad;
 
 	lados(&tri);
 	lados(&quad);
+
 }
 

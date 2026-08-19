@@ -36,6 +36,12 @@
     <ClCompile Include="aula_6_heranca_polimorismo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="aula_7_templates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aual_8_STL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
