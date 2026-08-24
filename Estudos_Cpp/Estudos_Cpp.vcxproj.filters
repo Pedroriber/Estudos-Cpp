@@ -42,12 +42,18 @@
     <ClCompile Include="aual_8_STL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RPN_calculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="stack.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rpn.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

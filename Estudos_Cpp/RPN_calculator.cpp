@@ -1,6 +1,8 @@
+#include<iostream>
+#include"stack.h"
+#include"rpn.h"
 
-#ifndef _STACK
-#define _STACK
+
 const unsigned int STK_MAX = 3;
 template<typename T>
 class Stack {
@@ -30,4 +32,3 @@ public:
 	}
 
 };
-#endif 
