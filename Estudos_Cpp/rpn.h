@@ -3,8 +3,15 @@
 
 using namespace std;
 
-bool getoperator(Stack* s, float* nl, float* n2);
-bool StrToFloat(const string& str, float* v);
-bool StrToChar(const string& str, char* c);
+bool getOperandos(Stack<float>* s, float* nl, float* n2);
 
+template<typename T>
+bool StrToValue(const string& str, T* entrada) {
+	istringstream stream(str);
+
+	if (stream >> *entrada) {
+		return true;
+	}
+	return false;
+}
 #endif

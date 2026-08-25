@@ -1,34 +1,59 @@
 #include<iostream>
+#include<sstream>
 #include"stack.h"
 #include"rpn.h"
 
+using namespace std;
 
-const unsigned int STK_MAX = 3;
-template<typename T>
-class Stack {
-public:
-	Stack() {
-		elems = new T[STK_MAX];
-		reset();
-	}
-	~Stack() {
-		delete[] elems
-	}
-private:
-	int top;
-	T* elems;
+int main() {
+	Stack<float> s;
+	while (true) {
 
-public:
-	void push(T val) {
-		elems[top++] = val;
-	}
-	void pop() {
-		return elems[--top];
-	}
-	void reset() { top = 0; }
+		string str;
+		cout << "> ";
+		cin>> str;
+		float val;
+		if (StrToValue(str, &val)) {
+			s.push(val);
+		}
+		else {
+			char c;
+			StrToValue(str, &c);
+			float n1, n2;
+			switch (c)
+			{
+				case '+':
+					if (getOperandos(&s, &n1, &n2)) {
+						s.push(n1 + n2);
+					}
+					break;
 
-	bool empty() const {
-		return top == 0;
-	}
+				case '-':
+					if (getOperandos(&s, &n1, &n2)) {
+						s.push(n1 - n2);
+					}
+					break;
 
-};
+				case '/':
+					if (getOperandos(&s, &n1, &n2)) {
+						s.push(n1 / n2);
+					}
+					break;
+
+				case '*':
+					if (getOperandos(&s, &n1, &n2)) {
+						s.push(n1 * n2);
+					}
+					break;
+
+				case 'q':
+					return 0;
+
+				default:
+					cout << "Parametro Invalido" << endl;
+			}
+		}
+		s.show();
+	}
+}
+
