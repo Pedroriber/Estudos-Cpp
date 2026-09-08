@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="aula1.cpp">
+    <ClCompile Include="aula_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="aula_3_tipos_ertruturados.cpp">
@@ -48,6 +48,18 @@
     <ClCompile Include="rpn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IUP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fibonacci.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arvore_binaria.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arvore_binaria.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="point.h">
@@ -59,5 +71,8 @@
     <ClInclude Include="rpn.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="entrada.txt" />
   </ItemGroup>
 </Project>

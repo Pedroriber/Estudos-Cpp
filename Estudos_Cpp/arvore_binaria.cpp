@@ -4,39 +4,7 @@
 #include<queue>
 using namespace std;
 
-struct ponto {
-	int x;
-	int y;
-};
 
-void captura(ponto& p) {
-	cout << "Digite as coordenadas do ponto (x y): ";
-	cin >> p.x >> p.y;
-}
-void imprime(ponto p) {
-	cout << "Ponto: (" << p.x << ", " << p.y << ")" << endl;
-}
-
-// ESTRUTURAS AGREGADAS
-struct circulo {
-	ponto c;
-	float raio;
-};
-
-float distancia(ponto& p1, ponto& p2) {
-	return sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
-}
-
-bool interior(circulo* c, ponto* p) {
-	return distancia(c->c, *p) < c->raio;
-}
-void captura_raio(circulo& c) {
-	cout << "Digite as coordenadas do centro do círculo (x y): ";
-	cin >> c.c.x >> c.c.y;
-	cout << "Digite o raio do círculo: ";
-	cin >> c.raio;
-
-}
 struct Tree {
 	int valor;
 	Tree* esquerda;
@@ -54,7 +22,7 @@ Tree* busca_arvore_bin(Tree* raiz, int num) {
 	if (raiz == NULL) {
 		return NULL;
 	}
-	
+
 	else if (num < raiz->valor) {
 		return busca_arvore_bin(raiz->esquerda, num);
 	}
@@ -87,7 +55,7 @@ Tree* remove_arvore_bin(Tree** raiz, int num) {
 		return remove_arvore_bin(&((*raiz)->direita), num);
 	}
 	else {
-		if ((*raiz)->esquerda == NULL && (*raiz)->direita==NULL) {
+		if ((*raiz)->esquerda == NULL && (*raiz)->direita == NULL) {
 
 			delete* raiz;
 			*raiz = NULL;
@@ -151,7 +119,7 @@ void percorre_arvore_bin_em_nivel(Tree* raiz) {
 	}
 	cout << endl;
 
-	
+
 }
 int main() {
 	/*ponto p;
@@ -171,7 +139,7 @@ int main() {
 	Tree* raiz = NULL;
 	int opcao = 0;
 	int valor = 0;
-	
+
 
 	do {
 		cout << "\n===============================" << endl;
@@ -242,4 +210,3 @@ int main() {
 
 	return 0;
 }
-
